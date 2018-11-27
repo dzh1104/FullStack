@@ -1,5 +1,6 @@
 package com.github.fight.DataTypeAndOperator;
 
+// 基本数据类型说明
 public class PrimitiveType {
 
     public static void main(String[] args) {

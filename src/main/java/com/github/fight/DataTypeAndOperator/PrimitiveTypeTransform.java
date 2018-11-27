@@ -1,5 +1,6 @@
 package com.github.fight.DataTypeAndOperator;
 
+// 基本类型的类型转换
 public class PrimitiveTypeTransform {
 
     public static void main(String[] args) {
