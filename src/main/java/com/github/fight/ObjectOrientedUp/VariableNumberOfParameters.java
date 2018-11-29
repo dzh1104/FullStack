@@ -17,5 +17,9 @@ public class VariableNumberOfParameters {
 
     public static void main(String[] args) {
         test(5, "JAVA", "fight");
+        // 动态初始化
+        test(8, new String[2]);
+        // 静态初始化
+        test(8, new String[]{"JAVA", "WEB"});
     }
 }
