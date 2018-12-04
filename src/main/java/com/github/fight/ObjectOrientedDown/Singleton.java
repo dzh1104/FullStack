@@ -22,6 +22,6 @@ public class Singleton {
     public static void main(String[] args) {
         Test t1 = Test.getInstance();
         Test t2 = Test.getInstance();
-        System.out.println(t1 == t2);
+        System.out.println("t1与t2相等吗" + (t1 == t2));
     }
 }
