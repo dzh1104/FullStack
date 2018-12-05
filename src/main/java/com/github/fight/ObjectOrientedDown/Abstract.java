@@ -63,7 +63,8 @@ class Triangle extends Shape {
 public class Abstract {
 
     public static void main(String[] args) {
-        Triangle t = new Triangle("red", 3, 4, 5);
+
+        Shape t = new Triangle("red", 3, 4, 5);
         System.out.println(t.calPerimeter());
         System.out.println(t.getType());
     }
