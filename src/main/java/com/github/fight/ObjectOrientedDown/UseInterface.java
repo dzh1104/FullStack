@@ -20,6 +20,9 @@ package com.github.fight.ObjectOrientedDown;
 // }
 public class UseInterface extends Singleton implements InterfaceA, InterfaceB, InterfaceC {
 
+    /*
+    * 实现类重写的抽象方法，必须是public访问权限，因为接口的抽象方法是public
+    * */
     @Override
     public void sayMsgA() {
 
