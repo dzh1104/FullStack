@@ -13,10 +13,10 @@ abstract class Shape {
 
     public Shape() {}
 
+    // 抽象类里的构造器并不是用于创建对象，而是让其子类调用这些构造器来完成属于抽象类的初始化操作
     public Shape(String color) {
 
-        System.out.println("执行Shape的构造器...");
-        this.color = color;
+        System.out.println("执行Shape的构造器..."); this.color = color;
     }
 
     public String getColor() {

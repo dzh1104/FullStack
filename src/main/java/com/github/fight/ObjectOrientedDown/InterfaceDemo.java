@@ -9,7 +9,9 @@ package com.github.fight.ObjectOrientedDown;
 // 接口里所有的成员都是public访问权限，省略的话，系统会自动指定为public
 // 如果不是定义默认方法，系统将自动为普通方法增加abstract修饰符
 // 接口里的普通方法不能有方法体，但类方法、默认方法都必须要有方法体
-// 接口里定义的内部类、内部接口、内部枚举默认采用public static修饰符，不管定义时是否制定这两个修饰符，系统都会自动使用public static对它们进行修饰
+// 接口里定义的内部类、内部接口、内部枚举默认采用public static修饰符，不管定义时是否制定这两个修饰符，系统都会自动使用public sta
+// 接口里定义的内部类，只能是静态内部类
+// tic对它们进行修饰
 interface Output {
     // 静态常量 + public + 定义初始化
     int MAX_CACHE_LINE = 50;
@@ -17,6 +19,8 @@ interface Output {
 
     // 抽象方法 + public + 无方法体
     // void out();
+    // 没有类抽象方法
+    // public abstract static void out();
     public abstract void out();
     // redundant 多余的public abstract
     void getData(String msg);
