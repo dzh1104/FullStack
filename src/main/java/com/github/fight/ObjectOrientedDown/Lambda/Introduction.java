@@ -26,7 +26,6 @@ interface Flyable {
 }
 
 interface Addable {
-
     int add(int a, int b);
 
 }
