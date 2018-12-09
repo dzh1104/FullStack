@@ -82,7 +82,11 @@ public class Members {
 
         // 通过EnumClass.valueOf()方法来获取指定枚举类的枚举值
         Gender2 g2 = Gender2.valueOf("FEMALE"); g2.setName("女"); System.out.println(g2 + "代表: " + g2.getName());
-        g2.setName("男"); System.out.println(g2 + "代表: " + g2.getName());
+        g2.setName("男");
+        System.out.println(g2 + "代表: " + g2.getName());
+
+        // 通过EnumClass.variable的形式来获取指定枚举类的枚举值
+        Gender3 g3 = Gender3.FEMALE; System.out.println(g3 + "代表: " + g3.getName());
     }
 
 }
