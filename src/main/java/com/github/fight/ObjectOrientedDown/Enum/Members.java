@@ -4,12 +4,16 @@ package com.github.fight.ObjectOrientedDown.Enum;
 // 成员变量、方法和构造器
 
 // 枚举类不能定义为抽象类
+// 枚举类不可以显式定义为抽象类，但是可以实现接口来包含抽象方法，此时枚举类就是抽象类了，系统会默认使用abstract修饰，而不是final修饰，此时可以派生子类
+// 例子见EnumImplements
 // abstract enum Gender1 {
 enum Gender1 {
     MALE, FEMALE;
 
     // 定义一个public修饰的实例变量
     public String name;
+
+    // void info();
 }
 
 enum Gender2 {
@@ -72,7 +76,7 @@ enum Gender3 {
     }
 }
 
-// 枚举类无法派生子类
+// 非抽象的枚举类无法派生子类，因为非抽象的枚举类，系统会默认使用final修饰
 /*
 class SubClass extends Gender1 {
 
