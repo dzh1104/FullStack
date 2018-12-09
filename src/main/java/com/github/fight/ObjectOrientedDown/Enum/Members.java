@@ -3,6 +3,8 @@ package com.github.fight.ObjectOrientedDown.Enum;
 // 枚举类的成员
 // 成员变量、方法和构造器
 
+// 枚举类不能定义为抽象类
+// abstract enum Gender1 {
 enum Gender1 {
     MALE, FEMALE;
 
@@ -69,6 +71,13 @@ enum Gender3 {
         return this.name;
     }
 }
+
+// 枚举类无法派生子类
+/*
+class SubClass extends Gender1 {
+
+}
+*/
 
 public class Members {
 
