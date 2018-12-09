@@ -20,6 +20,35 @@ interface Product {
 
     public String getName();
 
+    void test();
+
+}
+
+abstract class Product2 {
+
+    private String name;
+
+    public abstract double getPrice();
+
+    public Product2() {
+
+    }
+
+    public Product2(String name) {
+
+        this.name = name;
+    }
+
+    public String getName() {
+
+        return name;
+    }
+
+    public void setName(String name) {
+
+        this.name = name;
+    }
+
 }
 
 public class AnonymousInnerClass {
@@ -29,9 +58,17 @@ public class AnonymousInnerClass {
         System.out.println("购买了一个" + p.getName() + "，花掉了" + p.getPrice());
     }
 
+    public void test2(Product2 p) {
+
+        System.out.println("购买了一个" + p.getName() + "，花掉了" + p.getPrice());
+    }
+
     public static void main(String[] args) {
 
-        AnonymousInnerClass ai = new AnonymousInnerClass(); ai.test(new Product() {
+        AnonymousInnerClass ai = new AnonymousInnerClass();
+
+        // 匿名内部类实现接口，创建对象
+        ai.test(new Product() {
 
             @Override
             public double getPrice() {
@@ -44,7 +81,52 @@ public class AnonymousInnerClass {
 
                 return "入门到跑路";
             }
+
+            @Override
+            public void test() {
+
+            }
         });
+
+        // 匿名内部类继承父类，创建对象
+        ai.test2(new Product2("深入浅出JAVA") {
+
+            @Override
+            public double getPrice() {
+
+                return 28.9;
+            }
+
+            public String getName() {
+
+                return "换个吧: 全栈之路";
+            }
+        });
+
+        int age = 8; Product p = new Product() {
+
+            @Override
+            public double getPrice() {
+
+                return 0;
+            }
+
+            @Override
+            public String getName() {
+
+                return null;
+            }
+
+            public void test() {
+                // 在Java 8以前下面语句将提示错误: age必须使用final修饰
+                // 在Java 8开始，匿名内部类、局部内部类允许访问非final修饰的局部变量
+                System.out.println(age);
+                // Variable 'age' is accessed from within inner class, needs to be final or effectively final
+                // age = 10;
+            }
+        };
+        // 多态性，接口中也需要定义该方法
+        p.test();
     }
 
 }
