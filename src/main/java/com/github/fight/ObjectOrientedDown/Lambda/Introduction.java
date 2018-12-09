@@ -4,7 +4,7 @@ package com.github.fight.ObjectOrientedDown.Lambda;
 /*
  * 支持将代码块作为方法参数
  * 更简洁的代码来创建只有 一个 抽象方法的接口(函数式接口)的实例
- * Lambda表达式实际上将会被当成一个"任意类型"的对象，到底需要当成何种类型的对象，这取决于运行环境的需要
+ * Lambda表达式实际上将会被当成一个"任意类型"的对象，到底需要当成何种类型的对象，这取决于运行环境的需要，也就是方法(代码块作为方法参数的所在方法)执行时方法参数是哪种类型的对象
  * 理解:
  *   1)代码块作为方法参数
  *   2)创建只有 一个 抽象方法的接口的实例
@@ -19,6 +19,7 @@ interface Eatable {
     // void taste2();
 }
 
+@FunctionalInterface
 interface Flyable {
 
     void fly(String weather);
@@ -26,6 +27,7 @@ interface Flyable {
 }
 
 interface Addable {
+
     int add(int a, int b);
 
 }
