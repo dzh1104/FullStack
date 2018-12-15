@@ -3,7 +3,9 @@ package com.github.fight.Genericity;
 // 泛型
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /*
 * JDK1.5 增加泛型支持在很大程度上都是为了让集合能记住其元素的数据类型
@@ -18,6 +20,14 @@ import java.util.List;
 * 从Java5以后，Java引入了"参数化类型"的概念，允许程序在创建集合时指定集合元素的类型
 * Java的参数化类型 被 称为 泛型 
 * */
+
+/*
+* 所谓泛型，就是允许在定义类、接口、方法时使用类型形参，这个类型形参将在声明变量、创建对象、调用方法时
+* 动态地指定(即传入实际的类型参数，也可以称为类型实参)。Java5改写了集合框架中的全部接口和类，为这些接口、类
+* 增加了泛型支持，从而可以在声明集合变量、创建集合对象时传入类型实参
+*
+* 实质: 允许在定义接口、类时声明类型形参，类型形参在整个接口、类体内可当成类型使用，几乎所有可使用普通类型的地方都可以使用这种类型传参
+* */
 public class Introduction {
 
     public static void main(String[] args) {
@@ -28,15 +38,26 @@ public class Introduction {
         strList1.add("production");
         // "不小心"把一个Integer对象"丢进"集合
         // 导致引发ClassCastException异常，因为程序试图把一个Integer对象转换为String类型
-        strList1.add(5);
+        // strList1.add(5);
         strList1.forEach(str -> System.out.println(((String)str).length()));
         
         // 编译时进行类型检查
-        List<String> strList2 = new ArrayList<String>();
+        // List<String> strList2 = new ArrayList<String>();
+        // Java自动推断出ArrayList的<>里应该是String
+        List<String> strList2 = new ArrayList<>();
         strList2.add("JS");
         strList2.add("dev");
         // 下面代码将引起编译错误，编译器提示错误
         // strList2.add(5);
         strList2.forEach(str -> System.out.println(str.length()));
+
+        // Java自动推断出HashMap的<>应该是String, List<String>
+        Map<String, List<String>> schoolsInfo = new HashMap<>();
+        List<String> schools = new ArrayList<>();
+        // List<String> 一个新的类型，List<String>可以当成是特殊的List子接口，但是这种子类物理上不存在
+        schools.add("斜月三星洞");
+        schools.add("西天取经路");
+        schoolsInfo.put("孙悟空", schools);
+        schoolsInfo.forEach((key, value) -> System.out.println(key + "-->" + value));
     }
 }
