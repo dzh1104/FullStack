@@ -1,5 +1,8 @@
 package com.github.fight.Genericity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -9,7 +12,13 @@ import java.util.Collection;
 * 下面定义了一个泛型方法，该泛型方法中定义了一个T类型形参，这个T类型形参就可以在该方法内当成普通类型使用
 *
 * */
+@Setter
+@Getter
 public class GenericMethod {
+
+    // 私有属性，使用了lombok后，不需要再去写setter/getter
+    private String lombokTestStr;
+
     static <T> void fromArrayToCollection(T[] a, Collection<T> c) {
         for(T o : a) {
             c.add(o);
@@ -26,5 +35,10 @@ public class GenericMethod {
         // T代表 String类型
         fromArrayToCollection(sa, cs);
         // fromArrayToCollection(oa, cs);
+
+        // 测试是否有setter/getter
+        GenericMethod genericMethod = new GenericMethod();
+        genericMethod.setLombokTestStr("dzh test lombok");
+        System.out.println(genericMethod.getLombokTestStr());
     }
 }
