@@ -11,6 +11,9 @@
     <name>FullStack</name>
     <description>Demo project for Spring Boot</description>
 
+    <!-- We need to start by creating a Maven pom.xml file. -->
+    <!-- The pom.xml is the recipe that is used to build your project. -->
+    <!-- Inherit defaults from Spring Boot -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -25,6 +28,7 @@
     </properties>
 
     <dependencies>
+        <!-- Add typical dependencies for a web application -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -48,12 +52,16 @@
 
     <build>
         <plugins>
+            <!-- Package as an executable jar -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
+
+    <!-- The preceding listing should give you a working build.  -->
+    <!--  You can test it by running mvn package (for now, you can ignore the “jar will be empty - no content was marked for inclusion!” warning). -->
 
 
 </project>
