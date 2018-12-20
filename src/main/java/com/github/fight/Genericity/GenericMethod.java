@@ -10,7 +10,6 @@ import java.util.Collection;
 
 /*
 * 下面定义了一个泛型方法，该泛型方法中定义了一个T类型形参，这个T类型形参就可以在该方法内当成普通类型使用
-*
 * */
 @Setter
 @Getter
