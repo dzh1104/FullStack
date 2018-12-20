@@ -19,6 +19,8 @@ public class GenericMethod {
     // 私有属性，使用了lombok后，不需要再去写setter/getter
     private String lombokTestStr;
 
+    private boolean check;
+
     static <T> void fromArrayToCollection(T[] a, Collection<T> c) {
         for(T o : a) {
             c.add(o);
@@ -40,5 +42,6 @@ public class GenericMethod {
         GenericMethod genericMethod = new GenericMethod();
         genericMethod.setLombokTestStr("dzh test lombok");
         System.out.println(genericMethod.getLombokTestStr());
+        System.out.println(genericMethod.isCheck());
     }
 }
