@@ -19,12 +19,13 @@ class Apple<T> {
     }
 
     public T getInfo() {
-
+    
+        System.out.println(info instanceof Object);
         return info;
     }
 
     public void setInfo(T info) {
-
+    
         this.info = info;
     }
 
@@ -41,5 +42,9 @@ public class Custom {
         Apple<Double> a3 = new Apple<>(9.99);
         System.out.println(a2.getInfo());
         System.out.println(a3.getInfo());
+        
+        // 如果不传类型，则类型是Object，对应的对象是 null
+        Apple apple = new Apple();
+        System.out.println(apple.getInfo());
     }
 }
