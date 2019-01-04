@@ -3,6 +3,8 @@ package com.github.fight;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,8 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
 * The @RequestMapping annotation provides “routing” information. It tells Spring that any HTTP request with the / path should be mapped to the home method.
 * The @RestController annotation tells Spring to render the resulting string directly back to the caller.
 * */
+
+// If you don’t want to use @SpringBootApplication, the @EnableAutoConfiguration and @ComponentScan annotations that it imports defines that behaviour so you can also use that instead.
 @RestController
-@SpringBootApplication
+//@SpringBootApplication
+@EnableAutoConfiguration
+@ComponentScan
+@Configuration
 public class FightApplication {
 
     @RequestMapping("/")
