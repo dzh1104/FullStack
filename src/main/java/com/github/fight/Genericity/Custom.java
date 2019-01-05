@@ -44,6 +44,7 @@ public class Custom {
         System.out.println(a3.getInfo());
         
         // 如果不传类型，系统会把T类型当成Object，对应的对象是 null
+        // null 是 所有引用类型的实例
         Apple apple = new Apple();
         System.out.println(apple.getInfo());
     }
