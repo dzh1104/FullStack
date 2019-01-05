@@ -8,6 +8,14 @@ import java.util.Collection;
 
 // 泛型方法
 
+/**
+ * 定义类、接口时可以使用类型形参，在该类的方法定义和成员变量定义、接口的方法定义(不可是成员变量，因为接口的成员变量是静态成员)中
+ * 中，这些类型形参可被当成普通类型来用。
+ *
+ * 在另外一些情况下，定义类、接口时没有使用类型形参，但定义方法时想自己定义类型形参，这也是可以的，
+ * Java 5提供了对泛型方法的支持。
+ * */
+
 /*
 * 下面定义了一个泛型方法，该泛型方法中定义了一个T类型形参，这个T类型形参就可以在该方法内当成普通类型使用
 * */
@@ -35,7 +43,7 @@ public class GenericMethod {
         Collection<String> cs = new ArrayList<>();
         // T代表 String类型
         fromArrayToCollection(sa, cs);
-        // fromArrayToCollection(oa, cs);
+//         fromArrayToCollection(oa, cs);
 
         // 测试是否有setter/getter
         GenericMethod genericMethod = new GenericMethod();
