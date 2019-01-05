@@ -12,8 +12,8 @@ public class TypeWildcard {
     // 使用类型通配符 ?，带通配符的List表示它是 各种泛型List的父类
     public void test(List<?> c) {
         for(int i = 0; i < c.size(); i++) {
-            System.out.println("元素是Object的实例？" + c.get(i).toString() + (c.get(i) instanceof Object));
-            System.out.println("元素是String的实例？" + c.get(i).toString() + (c.get(i) instanceof String));
+            System.out.println("元素" + c.get(i).toString() + "是Object的实例？" + (c.get(i) instanceof Object));
+            System.out.println("元素" + c.get(i).toString() + "是String的实例？" + (c.get(i) instanceof String));
         }
     }
 

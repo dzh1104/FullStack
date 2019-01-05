@@ -64,9 +64,15 @@ public class TypeWildcardUpperLimit {
 
     public static void main(String[] args) {
         List<Circle> circleList = new ArrayList<>();
+        circleList.add(new Circle());
+        // circleList.add(new Rectangle());
+        
+        List<Object> objectList = new ArrayList<>();
         Canvas c = new Canvas();
         // 不能把List<Circle>当成List<Shape>使用，编译错误
         // 所以继续使用类型通配符
         c.drawAll(circleList);
+        
+        // c.drawAll(objectList);
     }
 }
