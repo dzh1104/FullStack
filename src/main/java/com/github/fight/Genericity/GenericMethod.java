@@ -27,6 +27,15 @@ public class GenericMethod {
     private String lombokTestStr;
 
     private boolean check;
+    
+    /**
+     * 该方法的c形参的数据类型是Collection<Object>
+     * */
+    static void fromArrayToCollectionNoG(Object[] a, Collection<Object> c) {
+        for(Object o: a) {
+            c.add(o);
+        }
+    }
 
     static <T> void fromArrayToCollection(T[] a, Collection<T> c) {
         for(T o : a) {
@@ -43,7 +52,7 @@ public class GenericMethod {
         Collection<String> cs = new ArrayList<>();
         // T代表 String类型
         fromArrayToCollection(sa, cs);
-//         fromArrayToCollection(oa, cs);
+        // fromArrayToCollection(oa, cs);
 
         // 测试是否有setter/getter
         GenericMethod genericMethod = new GenericMethod();
