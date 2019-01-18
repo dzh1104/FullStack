@@ -2,6 +2,8 @@ package com.github.fight.Reflect;
 
 // Class类的使用
 
+// 博文：https://www.cnblogs.com/rocomp/p/4781987.html
+
 /*
  * 万事万物皆对象，（当然，基本数据类型，静态成员不是面向对象（属于类的））
  * 所以我们创建的每一个类也都是对象，即类本身是java.lang.Class类的实例对象，但是这些对象都不需要new出来，因为java.lang.Class类的构造方法是私有的
