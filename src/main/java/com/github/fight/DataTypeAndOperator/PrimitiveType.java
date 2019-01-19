@@ -86,12 +86,12 @@ public class PrimitiveType {
         System.out.println(ch);
 
         // 定义一个'疯'字符值
-        char zhong = '疯';
+        // char zhong = '疯';
 
         // 直接将一个char变量当成int类型变量使用
-        int zhongValue = zhong;
+        // int zhongValue = zhong;
 
-        System.out.println(zhongValue);
+        // System.out.println(zhongValue);
 
         /**
          * 浮点型
