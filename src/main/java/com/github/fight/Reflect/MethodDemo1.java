@@ -4,27 +4,27 @@ import java.lang.reflect.Method;
 
 public class MethodDemo1 {
 	public static void main(String[] args) {
-	   //Òª»ñÈ¡print(int ,int )·½·¨  1.Òª»ñÈ¡Ò»¸ö·½·¨¾ÍÊÇ»ñÈ¡ÀàµÄÐÅÏ¢£¬»ñÈ¡ÀàµÄÐÅÏ¢Ê×ÏÈÒª»ñÈ¡ÀàµÄÀàÀàÐÍ
+	   //Òªï¿½ï¿½È¡print(int ,int )ï¿½ï¿½ï¿½ï¿½  1.Òªï¿½ï¿½È¡Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç»ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		A a1 = new A();
 		Class c = a1.getClass();
 		/*
-		 * 2.»ñÈ¡·½·¨ Ãû³ÆºÍ²ÎÊýÁÐ±íÀ´¾ö¶¨  
-		 * getMethod»ñÈ¡µÄÊÇpublicµÄ·½·¨
-		 * getDelcaredMethod×Ô¼ºÉùÃ÷µÄ·½·¨
+		 * 2.ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÆºÍ²ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		 * getMethodï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½publicï¿½Ä·ï¿½ï¿½ï¿½
+		 * getDelcaredMethodï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
 		 */
 	    try {
 			//Method m =  c.getMethod("print", new Class[]{int.class,int.class});
 	    	Method m = c.getMethod("print", int.class,int.class);
-	    	
-	    	//·½·¨µÄ·´Éä²Ù×÷  
-	    	//a1.print(10, 20);·½·¨µÄ·´Éä²Ù×÷ÊÇÓÃm¶ÔÏóÀ´½øÐÐ·½·¨µ÷ÓÃ ºÍa1.printµ÷ÓÃµÄÐ§¹ûÍêÈ«ÏàÍ¬
-	        //·½·¨Èç¹ûÃ»ÓÐ·µ»ØÖµ·µ»Ønull,ÓÐ·µ»ØÖµ·µ»Ø¾ßÌåµÄ·µ»ØÖµ
+
+	    	//ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	    	//a1.print(10, 20);ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½a1.printï¿½ï¿½ï¿½Ãµï¿½Ð§ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½Í¬
+	        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ð·ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½null,ï¿½Ð·ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½Ø¾ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½Öµ
 	    	//Object o = m.invoke(a1,new Object[]{10,20});
 	    	Object o = m.invoke(a1, 10,20);
 	    	System.out.println("==================");
-	    	//»ñÈ¡·½·¨print(String,String)
+	    	//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½print(String,String)
              Method m1 = c.getMethod("print",String.class,String.class);
-             //ÓÃ·½·¨½øÐÐ·´Éä²Ù×÷
+             //ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
              //a1.print("hello", "WORLD");
              o = m1.invoke(a1, "hello","WORLD");
              System.out.println("===================");
@@ -33,7 +33,6 @@ public class MethodDemo1 {
                // m2.invoke(a1, new Object[]{});
                 m2.invoke(a1);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
      

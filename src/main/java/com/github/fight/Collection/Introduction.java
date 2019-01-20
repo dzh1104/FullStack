@@ -52,6 +52,31 @@ public class Introduction {
 
         // ArrayList已经覆盖了toString()，直接可以打印结果
         System.out.println(c);
+
+        System.out.println("========");
+
+        Collection c2 = new ArrayList();
+        c2.add("a");
+        c2.add("b");
+        c2.add("c");
+        System.out.println(c2);
+
+        // 移除集合中指定的元素
+        c2.remove("a");
+
+        System.out.println(c2);
+
+        // 获取集合的长度
+        System.out.println(c2.size());
+
+        // 清空集合中所有的元素
+        c2.clear();
+        System.out.println(c2);
+
+        // 判断一个集合是否为空
+        System.out.println(c2.isEmpty());
+
+        System.out.println(c2.size());
     }
 }
 
