@@ -16,8 +16,18 @@ public class DateDemo {
         Date date = new Date();
         System.out.println(date);
 
-        // 把一个毫秒值 转成日期类型
-        // 获取当前时间的 毫秒
+        // 获取当前时间的 毫秒: 时间戳
         long curTime = System.currentTimeMillis();
+        System.out.println(curTime);
+        // 把一个毫秒值 转成日期类型
+        Date date1 = new Date(curTime);
+        System.out.println(date1);
+
+        // 中国人喜欢的风格
+        String str = date1.toLocaleString();
+        System.out.println(str);
+
+        // 把一个日期类型转成时间戳
+        System.out.println(date1.getTime());
     }
 }
