@@ -1,4 +1,4 @@
-package com.github.fight.BaseClassLibrary;
+package com.github.fight.BaseClassLibrary.Date;
 
 import java.util.Date;
 
