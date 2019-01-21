@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 // 类型通配符
+// 通配符只用来接收使用、定义使用，不能做添加操作、调用使用
+// List<?> list = new ArrayList<>();
 public class TypeWildcard {
     // 此处使用List接口时没有传入实际类型参数，这将引起泛型警告
 //     public void test(List c) {
