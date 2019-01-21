@@ -29,5 +29,9 @@ public class DateDemo {
 
         // 把一个日期类型转成时间戳
         System.out.println(date1.getTime());
+
+        System.out.println(date.before(date1));
+        System.out.println(date.compareTo(date1));
+        System.out.println(date.equals(date1));
     }
 }

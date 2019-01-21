@@ -5,6 +5,8 @@ import java.text.ParseException;
 import java.util.Date;
 
 // 日期格式化
+// 使用 DateFormat 类来格式化和解析日期字符串
+// 使用 Calendar 类实现日期和时间字段之间转换
 public class DateFormatDemo {
     public static void main(String[] args) throws ParseException {
         Date date = new Date();
