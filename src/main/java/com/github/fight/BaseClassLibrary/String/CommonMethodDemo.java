@@ -3,7 +3,7 @@ package com.github.fight.BaseClassLibrary.String;
 import java.util.ArrayList;
 import java.util.List;
 
-// 字符串常用方法demo
+// 字符串常用方法应用demo
 public class CommonMethodDemo {
     public static void main(String[] args) {
         /*
