@@ -1,6 +1,7 @@
 package com.github.fight.BaseClassLibrary;
 
 // Math类
+// java.math.BigDecimal java.lang.Math区别开
 // 学习文章：https://www.cnblogs.com/whiteme/p/7234243.html
 public class MathDemo {
     public static void main(String[] args) {
@@ -29,8 +30,8 @@ public class MathDemo {
         /*
         round 四舍五入，float时返回int值，double时返回long值
          */
-        System.out.println(Math.round(10.1));   //10
-        System.out.println(Math.round(10.7));   //11
-        System.out.println(Math.round(10.7F));   //11
+        System.out.println(Math.round(10.1));   // 10
+        System.out.println(Math.round(10.7));   // 11
+        System.out.println(Math.round(10.7F));  // 11 类型不一样的~
     }
 }

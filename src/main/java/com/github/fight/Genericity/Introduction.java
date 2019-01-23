@@ -40,7 +40,7 @@ public class Introduction {
         // 导致引发ClassCastException异常，因为程序试图把一个Integer对象转换为String类型
         // strList1.add(5);
         strList1.forEach(str -> System.out.println(((String)str).length()));
-        
+
         // 编译时进行类型检查
         // List<String> strList2 = new ArrayList<String>();
         // Java自动推断出ArrayList的<>里应该是String
