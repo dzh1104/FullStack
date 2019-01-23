@@ -20,5 +20,16 @@ public class CommonMethodDemo {
             }
         }
         System.out.println(suffixNames);
+
+        /*
+        * 需求：
+        *   将首字母大写
+        * */
+        String str1 = "abcd";
+        String fCh = str1.substring(0, 1);
+        fCh = fCh.toUpperCase();
+        String restStr = str1.substring(1);
+        String res = fCh + restStr;
+        System.out.println(res);
     }
 }
