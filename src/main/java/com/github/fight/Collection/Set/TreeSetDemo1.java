@@ -27,6 +27,7 @@ public class TreeSetDemo1 {
     }
 }
 
+// 泛型传入Person，因为我们比较的是Person对象
 class Person implements Comparable<Person> {
     String name;
     int age;
