@@ -3,7 +3,7 @@ package com.github.fight.Collection.Set;
 import java.util.HashSet;
 import java.util.Random;
 
-// HashSet的一个实例
+// HashSet的一个使用demo
 public class HashSetOfUse {
     public static void main(String[] args) {
         /*
