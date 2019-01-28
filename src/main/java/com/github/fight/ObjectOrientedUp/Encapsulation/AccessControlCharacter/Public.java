@@ -1,5 +1,6 @@
 package com.github.fight.ObjectOrientedUp.Encapsulation.AccessControlCharacter;
 
+// 访问权限级别： public > protected > default > private
 // 公共访问权限
 public class Public {
     /*

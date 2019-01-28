@@ -1,11 +1,7 @@
 package com.github.fight.ObjectOrientedUp;
 
+// static修饰符：静态成员
 public class StaticModifier {
-
-    public static void getMessage() {
-
-        System.out.println("简单的getMessage方法");
-    }
 
     public static void main(String[] args) {
         /*
@@ -30,6 +26,12 @@ public class StaticModifier {
     public void info() {
 
         System.out.println("简单的info方法");
+    }
+
+    public static void getMessage() {
+        // 'com.github.fight.ObjectOrientedUp.StaticModifier.this' cannot be referenced from a static context
+        // this.info();
+        System.out.println("简单的getMessage方法");
     }
 
 }

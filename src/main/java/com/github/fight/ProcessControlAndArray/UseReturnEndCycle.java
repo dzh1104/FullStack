@@ -8,8 +8,8 @@ public class UseReturnEndCycle {
             System.out.println("i的值是: " + i);
             if (i == 1) {
                 // return i;
-                // continue;
-                break;
+                continue;
+                // break;
                 // return;
             }
         }

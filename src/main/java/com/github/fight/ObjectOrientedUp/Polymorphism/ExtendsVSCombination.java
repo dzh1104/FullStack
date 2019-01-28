@@ -37,6 +37,9 @@ public class ExtendsVSCombination {
          *
          * 类似: 方法多态性，访问的都是子类的方法
          */
+        /*
+        * 不要在父类构造器中，使用重写的方法
+        * */
         Sub2 sub2 = new Sub2();
 
     }

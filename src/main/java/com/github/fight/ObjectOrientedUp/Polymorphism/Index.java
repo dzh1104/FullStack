@@ -2,9 +2,9 @@ package com.github.fight.ObjectOrientedUp.Polymorphism;
 
 // 多态
 /*
-* 时机: 子类对象父类变量
-* 相同类型的变量 调用同一个方法时呈现出多种不同的行为特征，这就是多态
-* 方法有多态性，对象的实例变量不具备多态性
+ * 时机: 子类对象父类变量
+ * 相同类型的变量 调用同一个方法时呈现出多种不同的行为特征，这就是多态
+ * 方法有多态性，对象的实例变量不具备多态性
  * 编写程序时，引用变量只能调用它编译时类型的方法，而不能调用它运行时类型的方法，即使它实际所引用的对象确实包含该方法
  *
  * */
@@ -12,12 +12,12 @@ package com.github.fight.ObjectOrientedUp.Polymorphism;
 class BaseClass {
     public int book = 6;
 
-    public void base () {
+    public void base() {
 
         System.out.println("父类的普通方法");
     }
 
-    public void test () {
+    public void test() {
 
         System.out.println("父类的被覆盖的方法");
     }
@@ -26,18 +26,20 @@ class BaseClass {
 class SubClass extends BaseClass {
     public String book = "JAVA";
 
-    public void test () {
+    public void test() {
 
         System.out.println("子类的覆盖父类的方法");
     }
 
-    public void sub () {
+    public void sub() {
 
         System.out.println("子类的普通方法");
     }
 }
+
 public class Index {
     public static void main(String[] args) {
+        System.out.println("====父类对象父类变量====");
         BaseClass bc = new BaseClass();
         System.out.println(bc.book);
         bc.base();
@@ -52,14 +54,19 @@ public class Index {
          *   型是子类类型)，否则将在运行时引发classCaseException异常
          * */
         System.out.println(bc instanceof SubClass);
-        // ((SubClass)bc).sub();
+        // ((SubClass)bc).sub(); // classCaseException异常
 
+        System.out.println("====子类对象子类变量====");
         SubClass sc = new SubClass();
         System.out.println(sc.book);
         sc.base();
         sc.test();
         sc.sub();
+        System.out.println(sc instanceof SubClass);
+        System.out.println(sc instanceof BaseClass);
 
+        System.out.println("====子类对象父类变量====");
+        // 到了多态咯
         BaseClass bs = new SubClass();
         // 实例变量无多态
         System.out.println(bs.book);
@@ -69,6 +76,8 @@ public class Index {
         // 编译不通过，因为父类中无此方法
         // bs.sub();
         // 强制类型转换，可调用子类中的方法
-        ((SubClass)bs).sub();
+        ((SubClass) bs).sub();
+        System.out.println(bs instanceof SubClass);
+        System.out.println(bs instanceof BaseClass);
     }
 }

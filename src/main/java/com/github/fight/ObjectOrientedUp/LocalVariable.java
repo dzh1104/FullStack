@@ -15,4 +15,10 @@ public class LocalVariable {
      *
      *  因为局部变量只保存基本类型的值或者对象的引用，因此局部变量所占的内存区通常比较小
      */
+    public static void main(String[] args) {
+        int age;
+        // Variable 'age' might not have been initialized
+        // 必须先初始化才可以使用
+        // System.out.println(age);
+    }
 }

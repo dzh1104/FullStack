@@ -6,11 +6,21 @@ public class MethodsOverload {
     /*
     * 同一个类 多个 同名的方法，形参列表不同
     * 至于方法的其他部分，如方法返回值类型、修饰符等，与方法重载没有任何关系
+    *
+    * 即使一个是静态方法 一个是实例方法，满足方法名相同而形参列表不同，就会形成方法重载
     * */
     public static void test () {
 
         System.out.println("无参数的test方法");
     }
+
+    // 'test()' is already defined in 'com.github.fight.ObjectOrientedUp.MethodsOverload'
+    // 不可以定义两个方法签名相同的方法
+    // 方法签名：方法名 + 参数列表
+    // public void test () {
+    //
+    //     System.out.println("无参数的test方法");
+    // }
 
     public void test (String msg) {
 
@@ -30,7 +40,7 @@ public class MethodsOverload {
 
     public static void main(String[] args) {
         MethodsOverload obj = new MethodsOverload();
-        // obj.test(); // 应使用类调用静态方法
+        obj.test(); // 应使用类调用静态方法
         MethodsOverload.test();
         obj.test("message");
 
