@@ -9,7 +9,7 @@ import java.util.Scanner;
 * aaabbbbbccc
 * abc
 * */
-public class LinkedSetOfUse {
+public class LinkedHashSetOfUse {
     public static void main(String[] args) {
         /*
          * 需求：

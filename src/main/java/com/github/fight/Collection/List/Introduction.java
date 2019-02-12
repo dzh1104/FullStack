@@ -49,7 +49,7 @@ public class Introduction {
 
         // 遍历集合，如果元素等于c，就把它删除
         // 1.遍历集合
-        Iterator it = list.iterator();
+        Iterator it = list.iterator(); // Iterable接口的一个方法: iterator()。它返回一个代表当前集合对象的泛型<T>迭代器，用于之后的遍历操作
         while (it.hasNext()) {
             // 2.取出对应的元素
             String str = (String) it.next();

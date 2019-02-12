@@ -3,12 +3,12 @@ package com.github.fight.Collection.Set;
 import java.util.TreeSet;
 
 // TreeSet：无序(不是按着添加的顺序取出的)
+/*
+ * 对添加的元素会进行排序，里面也是可以保证元素唯一的
+*/
+
 public class TreeSetDemo {
     public static void main(String[] args) {
-        /*
-         * 对添加的元素会进行排序，里面也是可以保证元素唯一的
-         * */
-
         // 数字大小
         TreeSet<Integer> treeSet = new TreeSet<>();
         treeSet.add(10);
