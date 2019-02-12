@@ -18,7 +18,7 @@ public class Introduction {
         list.add(1, "myxq");
         System.out.println(list);
         // 角标必须<=size
-        // list.add(5, "sm");
+        // list.add(6, "sm");
         list.add(4, "mmk");
         System.out.println(list);
 
@@ -87,7 +87,7 @@ public class Introduction {
 
         while (it1.hasPrevious()) {
             System.out.println("preIndex: " + it1.previousIndex());
-            // System.out.println(it1.previous()); // 注释这行会死循环
+            System.out.println(it1.previous()); // 注释这行会死循环
         }
     }
 }
